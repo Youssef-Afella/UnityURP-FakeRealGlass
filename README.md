@@ -1,6 +1,12 @@
 # UnityURP-FakeRealGlass
 Fast glass shader that doesn't require any RayTracing or RayMarching.
 It's not 100% accurate but it's probably the best possible thing we can do with what we have.
+If you find it usefull and want to help me maintain it, please consider supporting me :</br>
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/youssef_afella)
+
+## Support
+- URP Only
+- Unity 6+ (other versions support will be added later)
 
 ## How to Use
 First, start by adding the "BackFaceNormalsTexture" feature then choosing the layermask for glass objects.
@@ -38,6 +44,6 @@ backFaceRefractedRay = refract(frontFaceRefractedRay, backNormal)</br>
 secondIntersection = positionWS + backFaceRefractedRay * Refraction Distance (arbitrary value)</br>
 
 ## Inspiration :
-- [Mirza Beig Post]("https://x.com/TheMirzaBeig/status/1944634252571660514?s=20")
-- [PoE Subsurface Refractions]("https://www.youtube.com/watch?v=b5hIzkANWF4")
-- [Webgl Glass and Refraction]("https://offscreencanvas.com/issues/webgl-glass-and-refraction/")
+- [Mirza Beig Post](https://x.com/TheMirzaBeig/status/1944634252571660514?s=20)
+- [PoE Subsurface Refractions](https://www.youtube.com/watch?v=b5hIzkANWF4)
+- [Webgl Glass and Refraction](https://offscreencanvas.com/issues/webgl-glass-and-refraction/)
