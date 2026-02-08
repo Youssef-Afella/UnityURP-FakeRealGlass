@@ -1,6 +1,7 @@
 # UnityURP-FakeRealGlass
-Fast glass shader that doesn't require any RayTracing or RayMarching.
+Fast glass shader that doesn't require any RayTracing or RayMarching.</br>
 It's not 100% accurate but it's probably the best possible thing we can do with what we have.
+
 If you find it usefull and want to help me maintain it, please consider supporting me :</br>
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/youssef_afella)
 
