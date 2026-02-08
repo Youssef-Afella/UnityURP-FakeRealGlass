@@ -1856,7 +1856,7 @@
     "m_Group": {
         "m_Id": "2681bb7747664d768a4b44050ece4024"
     },
-    "m_Name": "Refract Ray",
+    "m_Name": "Split Ray",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -2183,7 +2183,7 @@
     "m_Title": "Front Face",
     "m_Position": {
         "x": -2820.0,
-        "y": 499.9999694824219
+        "y": 499.2000732421875
     }
 }
 
@@ -5364,7 +5364,7 @@
     "m_Group": {
         "m_Id": "bdb6bdb580e743e3af64518236111733"
     },
-    "m_Name": "Refract Ray",
+    "m_Name": "Split Ray",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -5745,7 +5745,7 @@
     "m_Title": "Thickness ",
     "m_Position": {
         "x": -3012.800048828125,
-        "y": -303.199951171875
+        "y": -304.0
     }
 }
 
