@@ -29,9 +29,15 @@ One other parameter in the material is the "UseConstantThickness" which simply r
 
 For the second refraction (which is assumed to be exiting the object) we simply take an arbitrary value "Refraction Distance" of how far the ray will go after exiting the object then we reproject the position to screen space.
 
-### Recap :
-first intersection = positionWS</br>
-second intersection = positionWS + frontFaceRefractedRay * Thickness</br>
-third intersection = positionWS + backFaceRefractedRay * Refraction Distance (arbitrary value)</br>
-
 The final assumption we can use here is that most people don't knows how glass is supposed to look like so why caring that much about accuracy :)</br>
+
+### Recap :
+firstIntersection = positionWS + frontFaceRefractedRay * Thickness</br>
+backNormal = sampleBackNormalsTexture(project(firstIntersection))</br>
+backFaceRefractedRay = refract(frontFaceRefractedRay, backNormal)</br>
+secondIntersection = positionWS + backFaceRefractedRay * Refraction Distance (arbitrary value)</br>
+
+## Inspiration :
+- [Mirza Beig Post]("https://x.com/TheMirzaBeig/status/1944634252571660514?s=20")
+- [PoE Subsurface Refractions]("https://www.youtube.com/watch?v=b5hIzkANWF4")
+- [Webgl Glass and Refraction]("https://offscreencanvas.com/issues/webgl-glass-and-refraction/")
