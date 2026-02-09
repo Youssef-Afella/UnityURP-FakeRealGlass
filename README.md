@@ -10,10 +10,10 @@ If you find it usefull and want to help me maintain it, please consider supporti
 - Unity 6+ (other versions support will be added later)
 
 ## How to Use
-First, start by adding the "BackFaceNormalsTexture" feature then choosing the layermask for glass objects.
+First, start by adding the "BackFaceNormalsTexture" feature then choosing the layermask for glass objects.</br>
 <img width="638" height="133" alt="image" src="https://github.com/user-attachments/assets/dda0c71b-0e2e-4dbe-934a-7728c9971ff2" />
 
-Next make a material from shader "Glass Double Face" or "Glass Single Face" (single face is better for spherical objects)
+Next make a material from shader "Glass Double Face" or "Glass Single Face" (single face is better for spherical objects)</br>
 <img width="646" height="514" alt="image" src="https://github.com/user-attachments/assets/f229567d-33d6-47ca-87f1-86fa5c5a1ac7" />
 
 Some parameters there are kinda strange so I explained them in the "Performance/Tech Details" section.
