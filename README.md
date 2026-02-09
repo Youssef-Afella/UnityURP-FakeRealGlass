@@ -2,7 +2,7 @@
 Fast glass shader that doesn't require any RayTracing or RayMarching.</br>
 It's not 100% accurate but it's probably the best possible thing we can do with what we have.
 
-If you find it usefull and want to help me maintain it, please consider supporting me :</br>
+If you find it usefull and want to help me maintain it, please consider supporting :</br>
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/youssef_afella)
 
 ## Support
@@ -29,7 +29,7 @@ The number of texture samples we do here is very low so it's probably fast enoug
 The only expensive part here is rendering the back face texture since we are re-rendering the objects again but it's not really that much (unless all the objects in your game are glass then that will double the cost of your geometry).
 
 The back face ray split is done througth : first refracting the ray on the front face, projecting the point into screen space, then reading the corresponding back normal from the texture to refract again and project again.</br>
-You can't project the ray after the first refraction directly without knowing how much the ray will travel througth the object (which cant done without ray tracing) so as an approximation we consider the thickness of the object at that point as the length that the ray will travel.</br>
+You can't project the ray after the first refraction directly without knowing how much the ray will travel througth the object (which cant be done without ray tracing) so as an approximation we consider the thickness of the object at that point as the length that the ray will travel.</br>
 The thickness is computed from the substracting the depth of the back faces from the depth of front faces.</br>
 The error from this assumption can be quiet high some time but there is no other choice (I believe) also the maximum possible diviation of the refracted ray in glass is 42degree so it will no be a big problem in most cases.
 One other parameter in the material is the "UseConstantThickness" which simply replaces the depth based thickness with a constant value, it can look better in some objects.
@@ -42,7 +42,7 @@ The final assumption we can use here is that most people don't knows how glass i
 firstIntersection = positionWS + frontFaceRefractedRay * Thickness</br>
 backNormal = sampleBackNormalsTexture(project(firstIntersection))</br>
 backFaceRefractedRay = refract(frontFaceRefractedRay, backNormal)</br>
-secondIntersection = positionWS + backFaceRefractedRay * Refraction Distance (arbitrary value)</br>
+secondIntersection = firstIntersection + backFaceRefractedRay * Refraction Distance (arbitrary value)</br>
 
 ## Inspiration :
 - [Mirza Beig Post](https://x.com/TheMirzaBeig/status/1944634252571660514?s=20)
